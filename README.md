@@ -1,2 +1,2 @@
 # Git
-Git & Github: La gúia definitiva
+Git & Github: La guía definitiva
