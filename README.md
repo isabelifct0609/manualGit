@@ -1,2 +1,2 @@
 # Git
-Learning Git &amp; Github
+Git & Github: La gúia definitiva
