@@ -1,27 +1,54 @@
-## Mostrar un listado de todos los cambios realizados
 
-Aparecen todos sus comentarios, desde el más reciente al más antiguo.
+### Visualizar estado log
 
-```sh 
-$ git log
+Después de haber hecho uno o varios commits, o si has clonado un repositorio que ya tenía un histórico de commits, probablemente el usuario quiera mirar atrás para ver los commits que se han llevado a cabo. Esto es posible con el comando:
+
+```sh
+git log
 ```
 
-## Mostrar un número determinado de entradas
+Para este comando existen diferentes opciones para su visualización. A continuación se exponen las opciones más comunes:
 
-Mostrará el número que le indiquemos.
+###### Logs en una sóla línea
 
-```sh 
-$ git log -number
+Muestra el historial de commits reducidos a una sóla línea para una mejor visualización:
+
+```sh
+git log --oneline
 ```
 
-## Mostrar un listado compacto
+###### Mostrar todos los commits
 
-```sh 
-$ git log –-oneline
+Si el usuario desea visualizar todos los commits hasta ese momento, la opción que debe usar en git log es:
+
+```sh
+git log --all
 ```
 
-## Mostrar un listado compacto y dibujando las ramas
+###### Diagrama de ramas
 
-```sh 
-$ git log --oneline --decorate --all –-graph
+Si el repositorio tiene ramas (branchs) existe la opción de mostrar más información de las ramas existentes y sus uniones (merges) con la opción siguiente:
+
+```sh
+git log --graph
+```
+
+Dicho comando se puede combinar con --oneline:
+
+```sh
+git log --graph --oneline
+```
+
+Y con --decorate, para una mejor visualización:
+
+```sh
+git log --graph --oneline --decorate
+```
+
+###### Mostrar "n" commits
+
+Si el usuario desea visualizar los "n" últimos commits puede añadir "-n" con el número de commits que desea visualizar (1, 2, 3, 4 ... etc). La opción quedaría de la siguiente forma:
+
+```sh
+git log -n
 ```

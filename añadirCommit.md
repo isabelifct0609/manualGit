@@ -1,13 +1,8 @@
-## Agregar un commit
 
-No abrimos el editor, lo hacemos directamente desde terminal.
+### AÑADIR COMMIT
 
-```sh
-$ git commit –m “mensajeCommit”
-```
-
-## Agregar al repositorio de seguimiento el archivo y el commit
+Para añadir el commit se usa el siguiente comando:
 
 ```sh
-$ git commit –am “mensajeCommit”
+	git commit -m "Texto que identifique por que se hizo el commit"
 ```
