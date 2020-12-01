@@ -6,4 +6,4 @@ Para fusionar (merge) ramas necesitamos ir a la rama donde queremos guardar los 
 git merge rama_a_fusionar
 ```
 
-Si no existen conflictos lo hace automaticamente. En caso de que existan te indicara que debes resolverlos manualmente
+Si no existen conflictos lo hace automaticamente. En caso de que existan te indicara que debes resolverlos manualmente.
