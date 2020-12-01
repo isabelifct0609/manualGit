@@ -11,3 +11,5 @@
 01/12/2020 - 10:15: Added changelog.md
 
 01/12/2020 - 10:38: Updated README.md
+
+01/12/2020 - 13:56: Added guíaGit.md
