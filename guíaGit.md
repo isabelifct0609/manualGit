@@ -1,3 +1,7 @@
+<div style="text-align: justify;">
+
+![git](img/git.png)
+
 # Guía definitiva de Git
 
 ### Instalar git
@@ -13,7 +17,7 @@ sudo apt install git
 ### Ayuda detallada sobre git
  
 ```sh
-$ git –help
+$ git--help
 ```
  
 ### Ayuda detallada sobre un comando concreto
@@ -21,57 +25,46 @@ $ git –help
 ```sh
 $ git --help nombreComando
 ```
+<div STYLE="page-break-after: always;"></div>
  
 ### Opciones de configuración
+
+```sh
+$ git config --list
+```
+A continuación se mostrarán comandos para ejecutar distintas opciones básicas de configuración de git.
+
+#### Agregar nombre de usuario de forma global
  
 ```sh
-$ git config –list
+$ git config --global user.name
 ```
  
-### Agregar nombre de usuario
- 
-```sh
-$ git config --global  user.name
-```
- 
-### Agregar email usuario
+#### Agregar email de usuario de forma global
  
 ```sh
 $ git config --global user.email
 ```
  
-### Configurar un alias
- 
-```sh
-$ git config --global alias.nombreDelAlias
-```
- 
-### Ver los alias que tenemos y agregar más
- 
-```sh
-$ git config --global –e
-```
- 
-### Hacer que la interfaz use colores para resaltar distintos aspectos en el texto
+#### Hacer que la interfaz use colores para resaltar distintos aspectos en el texto
  
 ```sh
 $ git config --global color.ui true
 ```
  
-### Cambiar la ubicación del archivo .gitignore
+#### Cambiar la ubicación del archivo .gitignore
  
 ```sh
 $ git config --global core.excludesfile rutaAlArchivoIgnore
 ```
 
-
-### Agregar nombre de usuario
+#### Agregar nombre de usuario de forma local
  
 ```sh
-$ git config --local  user.name
+$ git config --local user.name
 ```
  
-### Agregar email usuario
+#### Agregar email de usuario de forma local
  
 ```sh
 $ git config --local user.email
@@ -83,10 +76,9 @@ $ git config --local user.email
 ```sh
 $ git init
 ```
- 
+<div STYLE="page-break-after: always;"></div>
 
-
- ### Visualizar estado repositorio
+### Visualizar estado del repositorio
 El siguiente comando enumera los archivos que se han preparado, los que están sin preparar y los archivos sin seguimiento:
  
 ``` sh
@@ -128,7 +120,7 @@ Este comando se puede utilizar en su forma simple con la opción -u o en su esti
  $ git add --update
 ```
  
-
+<div STYLE="page-break-after: always;"></div>
 
 ### Quitar del seguimiento
  
@@ -142,14 +134,14 @@ Para quitar un archivo que se encuentra en el stage para que no se le realice el
 Para añadir el commit se usa el siguiente comando:
  
 ```sh
-   git commit -m "Texto que identifique por que se hizo el commit"
+   git commit -m "Mensaje del commit"
 ```
  
 
 
 ### Modificar commit
  
-El comando git commit --amendes una forma práctica de cambiar la confirmación más reciente. Esto le permite combinar los cambios en el nivel de ensayo con la confirmación anterior en lugar de crear una confirmación completamente nueva. También puede usar este comando para simplemente editar el mensaje de confirmación anterior sin cambiar la instantánea correspondiente. Sin embargo, la corrección no solo cambia la confirmación más reciente, sino que la reemplaza por completo. Esto significa que la confirmación corregida representa una nueva unidad con su propia referencia. Git lo trata como una confirmación completamente nueva, que se puede reconocer con el asterisco (*) en el diagrama a continuación. Hay algunos escenarios comunes para usar git commit --amend.
+Existe una forma de cambiar la confirmación más reciente. Esto le permite combinar los cambios en el nivel de ensayo con la confirmación anterior en lugar de crear una confirmación completamente nueva. Sin embargo, la corrección no solo cambia la confirmación más reciente, sino que la reemplaza por completo. El comando a utilizar es:
  
 ```sh
 $ git commit --amend
@@ -158,13 +150,13 @@ $ git commit --amend
 
 ### Renombrar commit
  
-Conozcamos ahora otro útil comando git mv, es el análogo a mv en unix para mover y renombrar archivos y directorios. Según la documentación oficial: “Git no hace un seguimiento explicito del movimiento de archivos. Si renombras un archivo, en Git no se almacena ningún metadato que indique que lo has renombrado...”
- 
-```sh
-$ git mv
-```
- 
+El comando anterior se utiliza también para modificar únicamente el mensaje del commit, sin alterar los archivos originalmente incluidos en el mismo:
 
+```sh
+$ git commit --amend
+```
+<div STYLE="page-break-after: always;"></div>
+ 
 ### Visualizar estado log
  
 Después de haber hecho uno o varios commits, o si has clonado un repositorio que ya tenía un histórico de commits, probablemente el usuario quiera mirar atrás para ver los commits que se han llevado a cabo. Esto es posible con el comando:
@@ -190,6 +182,7 @@ Si el usuario desea visualizar todos los commits hasta ese momento, la opción q
 ```sh
 git log --all
 ```
+<div STYLE="page-break-after: always;"></div>
  
 ###### Diagrama de ramas
  
@@ -218,7 +211,7 @@ Si el usuario desea visualizar los "n" últimos commits puede añadir "-n" con e
 ```sh
 git log -n
 ```
-
+<div STYLE="page-break-after: always;"></div>
 
 ### Moverse en el tiempo
  
@@ -296,7 +289,7 @@ $ git rm --cached nombreArchivo
 
 ### Crear archivo .gitignore
  
-Cuando hacemos git add. preparamos todos los archivos que hayan sido modificados. Pero muy a menudo hay archivos en el directorio de trabajo que no queremos que se añadan. Para evitar este problema y facilitar el trabajo, git permite crear un archivo donde escribir qué archivos se quieren ignorar.
+Cuando ejecutamos el comando "git add ." preparamos todos los archivos que hayan sido modificados. Pero muy a menudo hay archivos en el directorio de trabajo que no queremos que se añadan. Para evitar este problema y facilitar el trabajo, git permite crear un archivo donde escribir qué archivos se quieren ignorar.
 El archivo debe llamase ".gitignore" (comenzando por punto) y ubicarse en el directorio raíz del proyecto.
 En este archivo se deben incluir los nombres de archivos que se quieran ignorar.
 Cada repositorio puede tener su propio .gitignore, pero es útil tener además un archivo general para todos los repositorios.
@@ -344,16 +337,17 @@ Si estás en otra rama, ejecuta el comando:
 ```sh
 $ git branch -m nombreAntiguo nombreNuevo
 ```
+<div STYLE="page-break-after: always;"></div>
 
 ### Fusionar ramas
  
-Para fusionar (merge) ramas necesitamos ir a la rama donde queremos guardar los cambios y indicarle en el siguiente comando la rama que queremos fusionar.
+Para fusionar (_merge_) ramas necesitamos ir a la rama donde queremos guardar los cambios y indicarle en el siguiente comando la rama que queremos fusionar.
  
 ```bash
 git merge rama_a_fusionar
 ```
  
-Si no existen conflictos lo hace automaticamente. En caso de que existan te indicara que debes resolverlos manualmente.
+Si no existen conflictos lo hace automáticamente. En caso de que existan te indicara que debes resolverlos manualmente.
  
 
 
@@ -373,7 +367,7 @@ Dependiendo del editor que se utilice dara unas opciones u otras. La imagen sigu
  
 **Compare Changes** une los dos cambios y es el usuario el que decide con que quedarse y realiza el commit cuando lo resuelve.
  
-
+<div STYLE="page-break-after: always;"></div>
 
 ### Eliminar ramas
  
@@ -416,8 +410,7 @@ La forma de mostrar las etiquetas que tenemos asignadas es muy sencilla. Se hace
 ``` sh
  $ git tag
 ```
- 
-
+ <div STYLE="page-break-after: always;"></div>
 
 ### Eliminar etiquetas
  
@@ -436,13 +429,23 @@ Al lado de las etiquetas se pueden mostrar mensajes que pueden ayudar a comprend
 Para escribir el mensaje que acompaña a estas etiquetas se utiliza el comando, donde la opción -a nos permite indicar la etiqueta sobre la que aplicaremos el mensaje, mientras la opción -m nos permitirá introducir un mensaje o descripción, siempre entre comillas.
  
 ``` sh
- $ git tag -a <nombreEtiqueta> -m "<descripción de la etiqueta>"
+ $ git tag -a <nombreEtiqueta> -m "Descripción de la etiqueta"
 ```
  
 
 
 ### Configurar un alias
  
+Con git es posible configurar aliases para comandos que no deseemos escribir en su forma completa cada vez que sean necesarios. Para configurar un alias a nivel de sistema, se emplea el siguiente comando:
+
 ```sh
-$ git config --global alias.nombreDelAlias (comandos)
+$ git config --global alias.nombreDelAlias (comando)
 ```
+
+Si se desea crear un alias para un repositorio en concreto, el comando a utilizar es:
+
+```sh
+$ git config --local alias.nombreDelAlias (comando)
+```
+
+</div>
