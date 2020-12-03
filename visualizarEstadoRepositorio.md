@@ -1,25 +1,25 @@
-### Resumen repositorio
+### VISUALIZAR ESTADO REPOSITORIO
 
-Vemos un resumen de cómo está el archivo.
+El siguiente comando enumera los archivos que se han preparado, los que están sin preparar y los archivos sin seguimiento:
 
-```sh 
+``` sh
 $ git status
 ```
 
-Vemos un resumen de como está el archivo en una línea.
+Para ver el estado del archivo en una sola línea ejecutamos el comando:
 
-```sh 
-$ git status –s
+``` sh
+$ git status -s
 ```
 
-Ver resumen de como está el archivo y la rama en la que estamos.
+Para visualizar el estado del archivo y la rama el la que nos encontramos, ejecutamos:
 
-```sh 
-$ git status –s –b
+``` sh
+$ git status -s -b
 ```
 
-Sería lo mismo que:
+o
 
-```sh
+``` sh
 $ git status -sb
 ```
